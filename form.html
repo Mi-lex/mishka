@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mishka</title>
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img src="#" alt="Мишка">
+    </a>
+    <nav class="main-nav">
+      <ul class="main-nav__list">
+        <li>
+          <a class="main-nav__item main-nav__item--active" href="#">Каталог товаров</a>
+        </li>
+        <li><a class="main-nav__item" href="#">Вязание на заказ</a></li>
+        <li><a class="main-nav__item" href="#">Новые поступления</a></li>
+        <li><a class="main-nav__item" href="#">Распродажа</a></li>
+      </ul>
+    </nav>
+    <ul class="page-header__user-list">
+      <li class="page-header__search">
+
+      </li>
+      <li class="page-header__basket">
+        <button class="page-header__basket-btn page-header__basket-btn--empty">
+          Корзина: <b>пока пуста</b>
+        </button>
+      </li>
+    </ul>
+  </header>
+
+  <main class="page-main">
+    <h1 class="page-title">
+      Вязание на заказ
+    </h1>
+    <form action="post" class="form">
+      <fieldset class="form__item form__item--type">
+        <legend class="form__item-title">Тип</legend>
+        <label>
+          Акессуар для интерьера
+          <input type="radio" name="type" value="interior" checked>
+          <span class="form__radio-mark"></span>
+        </label>
+        <label>
+          Детская игрушка
+          <input type="radio" name="type" value="toy">
+          <span class="form__radio-mark"></span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form__item form__item--colour">
+        <legend class="form__item-title">Цвет</legend>
+        <label>
+          Белый
+          <input type="checkbox" name="colour" value="white" checked>
+          <span class="checkmark"></span>
+        </label>
+        <label>
+          Серый
+          <input type="checkbox" name="colour" value="grey" checked>
+          <span class="checkmark"></span>
+        </label>
+        <label>
+          «Тиффани»
+          <input type="checkbox" name="colour" value="tiffani">
+          <span class="checkmark"></span>
+        </label>
+        <label>
+          Черный
+          <input type="checkbox" name="colour" value="black">
+          <span class="checkmark"></span>
+        </label>
+        <label>
+          Розовый
+          <input type="checkbox" name="colour" value="pink">
+          <span class="checkmark"></span>
+        </label>
+        <label>
+          Оранжевый
+          <input type="checkbox" name="colour" value="orange">
+          <span class="checkmark"></span>
+        </label>
+      </fieldset>
+
+      <fieldset class="form__item form__item--name">
+        <legend class="form__item-title">ФИО</legend>
+        <label>
+          Имя:
+          <input type="text" name="name" required placeholder="Введите ваше имя*">
+        </label>
+        <label>
+          Фамилия:
+          <input type="text" name="surname" required placeholder="Укажите фамилию*">
+        </label>
+        <label>
+          Отчество:
+          <input type="text" name="surname" placeholder="Отчество, если желаете*">
+        </label>
+      </fieldset>
+
+      <fieldset class="form__item form__item--contacts">
+        <label for="number" class="form__item-title">
+          Тел:
+        </label>
+        <input type="number" id="number" name="number" required placeholder="+7 XXX XX XX*">
+        <label for="email" class="form__item-title">
+          E-mail
+        </label>
+        <input type="email" name="email" id="email" required placeholder="Ваш Email*">
+      </fieldset>
+      <fieldset class="form__item form__item--extra-info">
+        <legend class="form__item-title">
+          Доп
+        </legend>
+        <textarea name="extra-info" rows="8" cols="10"
+          placeholder="Опишите все ваши пожелания к заказу">
+        </textarea>
+      </fieldset>
+    </form>
+    <button class="form__make-order btn">
+      Отправить заказ
+    </button>
+    <small class="form__note">
+      *Поля обязательны для заполнения
+    </small>
+  </main>
+
+  <footer class="page-footer">
+    <a href="#" class="page-footer__logo">
+      <img src="zaglushka" alt="Мишка">
+    </a>
+    <div class="page-footer__social social">
+      <a href="#" class="social__item social__item--instagramm">
+        Instagramm
+      </a>
+      <a href="#" class="social__item social__item--facebook">
+        Facebook
+      </a>
+      <a href="#" class="social__item social__item--twitter">
+        Twitter
+      </a>
+    </div>
+    <div class="page-footer__copyright copyright">
+      <b class="copyright__text">
+        Разработано
+      </b>
+      <a href="#" class="copyright__link">
+        htmlAcademy
+      </a>
+    </div>
+  </footer>
+</body>
+</html>
