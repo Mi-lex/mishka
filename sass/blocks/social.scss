@@ -1,0 +1,26 @@
+.social {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @include custom-list;
+
+  &__link {
+    display: block;
+    width: 50px;
+    height: 50px;
+
+    font-size: 0;
+    line-height: 0;
+    color: transparent;
+
+    background-color: grey;
+  }
+}
+
+// Need to correct position of social block
+
+@media (min-width: $tablet-width) {
+  .social {
+    width: 220px;
+  }
+}

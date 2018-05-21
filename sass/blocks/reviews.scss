@@ -1,0 +1,144 @@
+.reviews {
+  margin-top: 30px;
+  padding-bottom: 52px;
+
+  background-color: #dbdbdb;
+  &__wrapper {
+    width: 260px;
+    margin: 0 auto;
+  }
+
+  &__header {
+    margin-bottom: 33px;
+  }
+
+  &__title {
+    margin: 0;
+    @include mobile-big-font;
+  }
+
+  &__list {
+    margin-bottom: 35px;
+  }
+
+  &__item {
+    margin: 0;
+  }
+
+  &__text {
+    margin-bottom: 35px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+
+  &__author {
+    display: block;
+    width: 260px;
+    font-style: normal;
+  }
+
+  &__author-name {
+    color: black;
+  }
+
+  &__author-nickname {
+    font-weight: 400;
+  }
+
+  &__controlls {
+    display: flex;
+    width: 100%;
+    margin-bottom: 38px;
+    vertical-align: center;
+  }
+
+  &__controller {
+    width: 50%;
+    height: 50px;
+    padding: 0;
+    border: 1px solid $grey-border;
+    background-color: white;
+  }
+
+  &__write {
+    width: 260px;
+  }
+}
+
+
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    width: $tablet-width;
+    margin: 0 auto;
+    margin-top: 27px;
+    padding-top: 80px;
+
+    &__wrapper {
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      width: $tablet-wrapper-width;
+    }
+
+    &__header {
+      order: 0;
+      margin-bottom: 52px;
+    }
+
+    &__title {
+      @include tablet-big-font;
+    }
+
+    &__write {
+      order: 1;
+      width: 175px;
+    }
+
+    &__list {
+      order: 2;
+      margin: 0;
+    }
+
+    &__text {
+      margin-bottom: 64px;
+
+      font-size: 17px;
+    }
+
+    &__controlls {
+      position: absolute;
+      right: 0;
+      bottom: 5px;
+
+      order: 3;
+      width: 176px;
+      margin: 0;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .reviews {
+    width: $desktop-wrapper-width;
+    margin-top: 36px;
+    padding-top: 72px;
+
+    &__wrapper {
+      width: 875px;
+      margin: 0;
+      margin-left: 175px;
+    }
+
+    &__title {
+      @include desktop-big-font;
+    }
+
+    &__text {
+      width: 775px;
+      margin-bottom: 48px;
+    }
+  }
+}

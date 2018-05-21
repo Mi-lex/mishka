@@ -1,0 +1,133 @@
+.contacts {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: $mobile-width;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding-bottom: 40px;
+
+  &__wrapper {
+    width: $mobile-wrapper-width;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+
+    font-size: 18px;
+    font-weight: bold;
+    line-height: 30px;
+
+    color: black;
+  }
+
+  &__list {
+    margin-bottom: 42px;
+    font-size: 15px;
+  }
+
+  &__item-name {
+    vertical-align: top;
+    width: 30%;
+  }
+
+  &__item-value {
+    vertical-align: top;
+  }
+
+  &__map {
+    width: $mobile-width;
+    height: 457px;
+    margin-bottom: 40px;
+
+    background: $light-grey;
+  }
+
+  &__write-us {
+    width: $mobile-wrapper-width;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .contacts {
+    width: $tablet-width;
+    margin-top: 46px;
+    padding-bottom: 57px;
+
+    &__wrapper {
+      width: $tablet-wrapper-width;
+    }
+
+    &__header {
+      margin-top: 20px;
+      margin-bottom: 55px;
+      @include tablet-big-font;
+    }
+
+    &__list {
+      width: 100%;
+      margin-bottom: 60px;
+
+      font-size: 17px;
+    }
+
+    &__field {
+      float: left;
+      width: 50%;
+    }
+
+    &__map {
+      width: $tablet-width;
+      margin-bottom: 54px;
+    }
+
+    &__write-us {
+      width: 230px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .contacts {
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: $desktop-wrapper-width;
+    margin-top: 46px;
+    padding-left: 175px;
+    padding-bottom: 105px;
+
+    &__wrapper {
+      width: 350px;
+    }
+
+    &__header {
+      margin-top: 73px;
+      margin-bottom: 17px;
+      @include desktop-big-font;
+    }
+
+    &__list {
+      margin-bottom: 10px;
+      border-spacing: 0 30px;
+    }
+
+    &__field {
+      float: none;
+    }
+
+    &__item-name {
+      width: 23%;
+    }
+
+    &__map {
+      width: 525px;
+      margin-bottom: 0;
+    }
+
+    &__write-us {
+      width: 230px;
+      margin-top: -52px;
+    }
+  }
+}

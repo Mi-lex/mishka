@@ -1,0 +1,13 @@
+.btn {
+  height: 52px;
+  border: 2px solid $btn-border-color;
+
+  font-family: $page-font;
+  font-size: $page-font-size;
+  font-weight: bold;
+  line-height: 20px;
+  text-transform: uppercase;
+
+  background-color: transparent;
+  color: $page-font-color;
+}

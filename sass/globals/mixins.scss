@@ -1,0 +1,42 @@
+@mixin custom-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  li {
+    display: inline-block;
+  }
+}
+
+@mixin page-header-link {
+  display: block;
+  padding-top: 28px;
+  padding-bottom: 28px;
+  padding-left: 75px;
+  padding-right: 60px;
+
+  color: black;
+
+  font-family: inherit;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  vertical-align: middle;
+}
+
+@mixin mobile-big-font {
+  font-size: 27px;
+  font-weight: bold;
+  line-height: 30px;
+  color: black;
+}
+
+@mixin tablet-big-font {
+  font-size: 43px;
+  line-height: 50px;
+}
+
+@mixin desktop-big-font {
+  font-size: 53px;
+  line-height: 57px;
+}
