@@ -4,33 +4,44 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Mishka</title>
+  <title>Mishka form</title>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img src="#" alt="Мишка">
-    </a>
-    <nav class="main-nav">
-      <ul class="main-nav__list">
-        <li>
-          <a class="main-nav__item main-nav__item--active" href="#">Каталог товаров</a>
+    <div class="page-header__wrapper">
+      <a class="page-header__logo">
+        <img src="#" alt="Мишка">
+      </a>
+      <nav class="main-nav">
+        <ul class="main-nav__list">
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--active main-nav__link--primary" href="#">Каталог товаров</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link main-nav__link--primary" href="#">Вязание на заказ</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Новые поступления</a>
+          </li>
+          <li class="main-nav__item">
+            <a class="main-nav__link" href="#">Распродажа</a>
+          </li>
+        </ul>
+      </nav>
+      <ul class="page-header__user-list">
+        <li class="page-header__search">
+          <a class="page-header__search-btn">
+            Поиск по сайту
+          </a>
         </li>
-        <li><a class="main-nav__item" href="#">Вязание на заказ</a></li>
-        <li><a class="main-nav__item" href="#">Новые поступления</a></li>
-        <li><a class="main-nav__item" href="#">Распродажа</a></li>
+        <li class="page-header__basket">
+          <button class="page-header__basket-btn page-header__basket-btn--empty">
+            Корзина: <b>пока пуста</b>
+          </button>
+        </li>
       </ul>
-    </nav>
-    <ul class="page-header__user-list">
-      <li class="page-header__search">
-
-      </li>
-      <li class="page-header__basket">
-        <button class="page-header__basket-btn page-header__basket-btn--empty">
-          Корзина: <b>пока пуста</b>
-        </button>
-      </li>
-    </ul>
+    </div>
   </header>
 
   <main class="page-main">
@@ -130,27 +141,35 @@
   </main>
 
   <footer class="page-footer">
-    <a href="#" class="page-footer__logo">
-      <img src="zaglushka" alt="Мишка">
-    </a>
-    <div class="page-footer__social social">
-      <a href="#" class="social__item social__item--instagramm">
-        Instagramm
+    <div class="page-footer__wrapper">
+      <a href="#" class="page-footer__logo">
+        <img src="zaglushka" alt="Мишка">
       </a>
-      <a href="#" class="social__item social__item--facebook">
-        Facebook
-      </a>
-      <a href="#" class="social__item social__item--twitter">
-        Twitter
-      </a>
-    </div>
-    <div class="page-footer__copyright copyright">
-      <b class="copyright__text">
-        Разработано
-      </b>
-      <a href="#" class="copyright__link">
-        htmlAcademy
-      </a>
+      <ul class="page-footer__social-list social">
+        <li class="social__item">
+          <a href="#" class="social__link social__link--instagramm">
+            Instagramm
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--facebook">
+            Facebook
+          </a>
+        </li>
+        <li class="social__item">
+          <a href="#" class="social__link social__link--twitter">
+            Twitter
+          </a>
+        </li>
+      </ul>
+      <div class="page-footer__copyright">
+        <b class="page-footer__copyright-text">
+          Разработано
+        </b>
+        <a href="#" class="page-footer__copyright-link">
+          htmlAcademy
+        </a>
+      </div>
     </div>
   </footer>
 </body>

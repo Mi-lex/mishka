@@ -1,0 +1,32 @@
+.subheader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 177px;
+
+  &__title {
+    @include mobile-big-font;
+  }
+
+  background-color: $light-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .subheader {
+    height: 226px;
+
+    &__title {
+      @include tablet-big-font;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .subheader {
+    height: 253px;
+
+    &__title {
+      @include desktop-big-font;
+    }
+  }
+}

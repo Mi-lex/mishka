@@ -1,0 +1,121 @@
+.catalog-list {
+  display: flex;
+  flex-direction: column;
+  width: $mobile-wrapper-width;
+  margin: 0 auto;
+  margin-top: 30px;
+
+  &__item {
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 30px;
+    border-bottom: 1px solid $grey-border;
+  }
+
+  &__item-picture {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 0;
+  }
+
+  &__item-img {
+    display: block;
+    width: $mobile-wrapper-width;
+    height: 195px;
+    margin-bottom: 30px;
+    background-color: #e6e7e9;
+  }
+
+  &__item-description {
+    padding-left: 28px;
+  }
+
+  &__item-name {
+    display: block;
+
+    line-height: 24px;
+    color: black;
+  }
+
+  &__item-params {
+    display: block;
+    margin-bottom: 26px;
+    font-size: 13px;
+    line-height: 30px;
+  }
+
+  &__price {
+    display: block;
+    width: 205px;
+    height: 74px;
+    padding-top: 25px;
+    border-top: 1px solid $grey-border;
+
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+
+    color: black;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .catalog-list {
+    width: $tablet-wrapper-width;
+
+    &__item {
+      margin-bottom: 54px;
+      border-top: 1px solid $grey-border;
+    }
+
+    &__item-picture {
+      flex-direction: row;
+      align-items: stretch;
+    }
+
+    &__item-img {
+      width: 50%;
+      height: 334px;
+      margin: 0;
+    }
+
+    &__item-description {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 50%;
+      padding-top: 26px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .catalog-list {
+    flex-direction: row;
+    justify-content: space-between;
+    width: $desktop-wrapper-width;
+
+    &__item {
+      width: auto;
+      border: none;
+    }
+
+    &__item-picture {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    &__item-img {
+      width: 316px;
+      height: 462px;
+      margin: 0;
+    }
+
+    &__item-description {
+      padding-top: 30px;
+      width: auto;
+    }
+  }
+}

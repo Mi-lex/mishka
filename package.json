@@ -2,7 +2,7 @@
   "name": "mishka",
   "version": "1.0.0",
   "description": "Small project for improving markup skill",
-  "main": "build/index.html",
+  "main": "build/catalog.html",
   "scripts": {
     "test": "editorconfig-cli",
     "build": "gulp build",
