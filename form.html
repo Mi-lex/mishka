@@ -45,99 +45,128 @@
   </header>
 
   <main class="page-main">
-    <h1 class="page-title">
-      Вязание на заказ
-    </h1>
+    <div class="subheader">
+      <h1 class="subheader__title">
+        Каталог товаров
+      </h1>
+    </div>
     <form action="post" class="form">
+      <p class="form__intro">
+        Мы будем рады воплотить в жизнь
+        ваши пожелания! Заполните простую
+        форму заказа и мы свяжемся с вами, чтобы уточнить детали.
+      </p>
       <fieldset class="form__item form__item--type">
-        <legend class="form__item-title">Тип</legend>
-        <label>
-          Акессуар для интерьера
-          <input type="radio" name="type" value="interior" checked>
-          <span class="form__radio-mark"></span>
-        </label>
-        <label>
-          Детская игрушка
-          <input type="radio" name="type" value="toy">
-          <span class="form__radio-mark"></span>
-        </label>
+        <div class="form__item-wrapper">
+          <legend class="form__item-title">Тип</legend>
+          <div class="form__item-content">
+            <label>
+              Акессуар для интерьера
+              <input type="radio" name="type" value="interior" checked>
+              <span class="form__radio-mark"></span>
+            </label>
+            <label>
+              Детская игрушка
+              <input type="radio" name="type" value="toy">
+              <span class="form__radio-mark"></span>
+            </label>
+          </div>
+        </div>
       </fieldset>
 
-      <fieldset class="form__item form__item--colour">
-        <legend class="form__item-title">Цвет</legend>
-        <label>
-          Белый
-          <input type="checkbox" name="colour" value="white" checked>
-          <span class="checkmark"></span>
-        </label>
-        <label>
-          Серый
-          <input type="checkbox" name="colour" value="grey" checked>
-          <span class="checkmark"></span>
-        </label>
-        <label>
-          «Тиффани»
-          <input type="checkbox" name="colour" value="tiffani">
-          <span class="checkmark"></span>
-        </label>
-        <label>
-          Черный
-          <input type="checkbox" name="colour" value="black">
-          <span class="checkmark"></span>
-        </label>
-        <label>
-          Розовый
-          <input type="checkbox" name="colour" value="pink">
-          <span class="checkmark"></span>
-        </label>
-        <label>
-          Оранжевый
-          <input type="checkbox" name="colour" value="orange">
-          <span class="checkmark"></span>
-        </label>
+      <fieldset class="form__item form__item--color">
+        <div class="form__item-wrapper">
+          <legend class="form__item-title">Цвета</legend>
+          <div class="form__item-content form__item-content--colors">
+            <label class="form__item-color-field">
+              Белый
+              <input type="checkbox" name="color" value="white" checked>
+              <span class="checkmark"></span>
+            </label>
+            <label class="form__item-color-field">
+              Серый
+              <input type="checkbox" name="color" value="grey" checked>
+              <span class="checkmark"></span>
+            </label>
+            <label class="form__item-color-field">
+              «Тиффани»
+              <input type="checkbox" name="color" value="tiffani">
+              <span class="checkmark"></span>
+            </label>
+            <label class="form__item-color-field">
+              Черный
+              <input type="checkbox" name="color" value="black">
+              <span class="checkmark"></span>
+            </label>
+            <label class="form__item-color-field">
+              Розовый
+              <input type="checkbox" name="color" value="pink">
+              <span class="checkmark"></span>
+            </label>
+            <label class="form__item-color-field">
+              Оранжевый
+              <input type="checkbox" name="color" value="orange">
+              <span class="checkmark"></span>
+            </label>
+          </div>
+        </div>
       </fieldset>
 
       <fieldset class="form__item form__item--name">
-        <legend class="form__item-title">ФИО</legend>
-        <label>
-          Имя:
-          <input type="text" name="name" required placeholder="Введите ваше имя*">
-        </label>
-        <label>
-          Фамилия:
-          <input type="text" name="surname" required placeholder="Укажите фамилию*">
-        </label>
-        <label>
-          Отчество:
-          <input type="text" name="surname" placeholder="Отчество, если желаете*">
-        </label>
+        <div class="form__item-wrapper">
+          <legend class="form__item-title">ФИО</legend>
+          <div class="form__item-content">
+            <label>
+              Имя:
+              <input type="text" name="name" required placeholder="Введите ваше имя*">
+            </label>
+            <label>
+              Фамилия:
+              <input type="text" name="surname" required placeholder="Укажите фамилию*">
+            </label>
+            <label>
+              Отчество:
+              <input type="text" name="surname" placeholder="Отчество, если желаете*">
+            </label>
+          </div>
+        </div>
       </fieldset>
 
       <fieldset class="form__item form__item--contacts">
-        <label for="number" class="form__item-title">
-          Тел:
-        </label>
-        <input type="number" id="number" name="number" required placeholder="+7 XXX XX XX*">
-        <label for="email" class="form__item-title">
-          E-mail
-        </label>
-        <input type="email" name="email" id="email" required placeholder="Ваш Email*">
+        <div class="form__item-wrapper">
+          <label for="number" class="form__item-title">
+            Тел:
+          </label>
+          <div class="form__item-content">
+            <input type="number" id="number" name="number" required placeholder="+7 XXX XX XX*">
+          </div>
+          <label for="email" class="form__item-title">
+            E-mail
+          </label>
+          <div class="form__item-content">
+            <input type="email" name="email" id="email" required placeholder="Ваш Email*">
+          </div>
+        </div>
       </fieldset>
       <fieldset class="form__item form__item--extra-info">
-        <legend class="form__item-title">
-          Доп
-        </legend>
-        <textarea name="extra-info" rows="8" cols="10"
+        <div class="form__item-wrapper">
+          <legend class="form__item-title">
+            Доп
+          </legend>
+          <textarea name="extra-info" rows="8" cols="10"
           placeholder="Опишите все ваши пожелания к заказу">
         </textarea>
+        </div>
       </fieldset>
+      <div class="form__footer">
+        <small class="form__note">
+          *Поля обязательны для заполнения
+        </small>
+        <button class="form__make-order btn">
+          Отправить заказ
+        </button>
+      </div>
     </form>
-    <button class="form__make-order btn">
-      Отправить заказ
-    </button>
-    <small class="form__note">
-      *Поля обязательны для заполнения
-    </small>
   </main>
 
   <footer class="page-footer">

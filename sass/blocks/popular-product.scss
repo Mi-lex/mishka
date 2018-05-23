@@ -172,6 +172,7 @@
 
     &__title {
       @include desktop-big-font;
+      z-index: 5;
     }
 
     &__legend {
