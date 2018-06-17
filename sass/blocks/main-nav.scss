@@ -10,6 +10,7 @@
     display: none;
     width: 100%;
     border: 1px solid $grey-border;
+    border-bottom: none;
   }
 
   &__link--primary {
@@ -31,7 +32,7 @@
     }
 
     &__link {
-      padding: 23px 0;
+      padding: 18px 0;
       border: none;
 
       font-size: 15px;
@@ -41,7 +42,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    width: 400px;
+    width: 445px;
     order: 0;
 
     &__item {

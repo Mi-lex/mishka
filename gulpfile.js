@@ -9,10 +9,6 @@ var gulp = require("gulp"),
     del = require("del"),
     run = require("run-sequence");
 
-gulp.task("clean", function() {
-  return del("build");
-})
-
 gulp.task("copy", function() {
   return gulp.src([
           "*.html"
@@ -46,7 +42,7 @@ gulp.task("html:update", ["html:copy"], function(done) {
 gulp.task("serve", ["style"], function() {
   server.init({
     server: "build/",
-    index: "form.html",
+    index: "index.html",
     notify: false,
     open: true,
     cors: true,
@@ -59,7 +55,6 @@ gulp.task("serve", ["style"], function() {
 
 gulp.task ("build", function(fn) {
   run(
-    "clean",
     "copy",
     "style",
     fn

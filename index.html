@@ -5,13 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mishka</title>
-  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header class="page-header">
-    <div class="page-header__wrapper">
+    <a class="page-header__logo page-header__logo--mobile">
+      <img src="/img/mishka-logo-mobile.svg" alt="Мишка">
+    </a>
+    <div class="page-header__menu page-header__menu--opened page-header__menu--nojs">
+      <button class="page-header__menu-toggle">
+        <span class="visually-hidden">
+          Открыть меню
+        </span>
+      </button>
       <a class="page-header__logo">
-        <img src="#" alt="Мишка">
+        <img src="/img/mishka-logo-desktop.svg" alt="Мишка">
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
@@ -199,7 +207,9 @@
               e-mail:
             </td>
             <td class="contacts__item-value">
-              info@mimimishkashop.ru
+              <a href="#" class="contacts__item-link">
+                info@mimimishkashop.ru
+              </a>
             </td>
           </tr>
           <tr class="contacts__field">
@@ -244,15 +254,30 @@
           </a>
         </li>
       </ul>
-      <div class="page-footer__copyright">
+      <a href="#" class="page-footer__copyright">
         <b class="page-footer__copyright-text">
           Разработано
         </b>
-        <a href="#" class="page-footer__copyright-link">
+        <span href="#" class="page-footer__copyright-icon">
           htmlAcademy
-        </a>
-      </div>
+        </span>
+      </a>
     </div>
   </footer>
+  <script type="text/javascript">
+    "use strict";
+
+    var menu = document.querySelector('.page-header__menu'),
+        toggle = menu.querySelector('.page-header__menu-toggle');
+
+    menu.classList.remove('page-header__menu--nojs');
+    menu.classList.remove('page-header__menu--opened');
+    menu.classList.add('page-header__menu--closed');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('page-header__menu--opened');
+      menu.classList.toggle('page-header__menu--closed');
+    });
+  </script>
 </body>
 </html>

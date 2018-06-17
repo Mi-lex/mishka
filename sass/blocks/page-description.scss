@@ -1,5 +1,5 @@
 .page-description {
-  background-color: $light-grey;
+  background: $light-grey url("../img/hero-mobile.jpg") no-repeat center top;
 
   &__wrapper {
     display: flex;
@@ -25,6 +25,7 @@
 
 @media (min-width: $tablet-width) {
   .page-description {
+    background: url("../img/hero-desktop.jpg") no-repeat center top;
     &__wrapper {
       min-width: $tablet-wrapper-width;
       height: 627px;
@@ -33,7 +34,7 @@
     &__delivery {
       align-self: flex-end;
       display: inline-block;
-      padding: 23px 0;
+      padding: 18px 0;
       border: none;
 
       font-size: 15px;
@@ -42,7 +43,7 @@
     }
 
     &__text {
-      padding: 90px 0;
+      padding: 92px 0;
       @include tablet-big-font;
     }
   }

@@ -2,23 +2,17 @@
   margin-top: 30px;
   padding-bottom: 42px;
 
-  // <- Temprorary
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  // ->
-
   &__wrapper {
     width: $mobile-wrapper-width;
     margin: 0 auto;
   }
 
   &__header {
-    margin-bottom: 28px;
+    margin-bottom: 21px;
   }
 
   &__title {
     margin: 0;
-    margin-bottom: 5px;
     @include mobile-big-font;
   }
 
@@ -34,13 +28,13 @@
   }
 
   &__description {
-    margin-bottom: 20px;
+    margin-bottom: 17px;
     vertical-align: top;
   }
 
   &__param-list {
     width: 100%;
-    margin-bottom: 28px;
+    margin-bottom: 27px;
     border-collapse: collapse;
   }
 
@@ -63,7 +57,7 @@
     min-width: $mobile-wrapper-width;
     height: 315px;
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 23px;
     background-color: #f1f1f1;
   }
 
@@ -76,7 +70,7 @@
 
   &__price {
     display: block;
-    margin-bottom: 28px;
+    margin-bottom: 25px;
     line-height: 24px;
   }
 
@@ -125,10 +119,18 @@
     }
 
     &__description {
-      margin-bottom: 40px;
+      margin-bottom: 35px;
 
       font-size: 17px;
       line-height: 30px;
+    }
+
+    &__param-cell {
+      width: 34%;
+    }
+
+    &__param-cell:nth-child(2) {
+      width: 66%;
     }
 
     &__picture {
@@ -142,6 +144,13 @@
       width: 290px;
       height: $shop-height;
       margin-top: -$shop-height;
+    }
+
+    &__price {
+      margin-bottom: 35px;
+
+      font-size: 20px;
+      line-height: 24px;
     }
 
     &__order {
@@ -191,7 +200,7 @@
     }
 
     &__description {
-      margin-bottom: 55px;
+      margin-bottom: 50px;
     }
 
     &__picture {

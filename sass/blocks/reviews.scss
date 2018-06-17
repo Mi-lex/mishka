@@ -2,14 +2,13 @@
   margin-top: 30px;
   padding-bottom: 52px;
 
-  background-color: #dbdbdb;
   &__wrapper {
     width: 260px;
     margin: 0 auto;
   }
 
   &__header {
-    margin-bottom: 33px;
+    margin-bottom: 25px;
   }
 
   &__title {
@@ -18,7 +17,7 @@
   }
 
   &__list {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
   }
 
   &__item {
@@ -26,7 +25,7 @@
   }
 
   &__text {
-    margin-bottom: 35px;
+    margin-bottom: 24px;
 
     font-size: 15px;
     line-height: 30px;
@@ -46,25 +45,67 @@
     font-weight: 400;
   }
 
-  &__controlls {
-    display: flex;
-    width: 100%;
-    margin-bottom: 38px;
-    vertical-align: center;
-  }
-
-  &__controller {
-    width: 50%;
-    height: 50px;
-    padding: 0;
-    border: 1px solid $grey-border;
-    background-color: white;
-  }
-
   &__write {
     width: 260px;
   }
 }
+
+.reviews__controlls {
+  display: flex;
+  width: 100%;
+  margin-bottom: 38px;
+  vertical-align: center;
+}
+
+.reviews__controller {
+  position: relative;
+
+  width: 50%;
+  height: 50px;
+  padding: 0;
+  border: 1px solid $grey-border;
+
+  background-color: white;
+  cursor: pointer;
+
+  &--next {
+    transform: rotate(180deg);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 35%;
+
+    padding: 7px;
+    border: solid black;
+    border-width: 0 0 4px 4px;
+
+    transform: translateY(-50%) rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 35%;
+
+    width: 45px;
+    height: 4px;
+    background-color: black;
+    transform: translateY(-50%);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 
 
 
@@ -74,6 +115,7 @@
     margin: 0 auto;
     margin-top: 27px;
     padding-top: 80px;
+    padding-bottom: 133px;
 
     &__wrapper {
       position: relative;
@@ -85,7 +127,7 @@
 
     &__header {
       order: 0;
-      margin-bottom: 52px;
+      margin-bottom: 30px;
     }
 
     &__title {
@@ -103,19 +145,36 @@
     }
 
     &__text {
-      margin-bottom: 64px;
+      margin-bottom: 52px;
 
       font-size: 17px;
     }
 
-    &__controlls {
-      position: absolute;
-      right: 0;
-      bottom: 5px;
+    &__author-name {
+      font-size: 18px;
+    }
+  }
 
-      order: 3;
-      width: 176px;
-      margin: 0;
+  .reviews__controlls {
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+
+    order: 3;
+    width: 176px;
+    margin: 0;
+  }
+
+  .reviews__controller {
+    border: none;
+    height: 46px;
+
+    &::before {
+      left: 30%;
+    }
+
+    &::after {
+      left: 30%;
     }
   }
 }
@@ -125,11 +184,16 @@
     width: $desktop-wrapper-width;
     margin-top: 36px;
     padding-top: 72px;
+    padding-bottom: 205px;
 
     &__wrapper {
       width: 875px;
       margin: 0;
       margin-left: 175px;
+    }
+
+    &__header {
+      margin-bottom: 32px;
     }
 
     &__title {
@@ -138,7 +202,7 @@
 
     &__text {
       width: 775px;
-      margin-bottom: 48px;
+      margin-bottom: 35px;
     }
   }
 }

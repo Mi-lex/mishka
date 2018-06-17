@@ -4,7 +4,7 @@
   align-items: center;
   width: $mobile-width;
   margin: 0 auto;
-  margin-top: 40px;
+  margin-top: 35px;
   padding-bottom: 40px;
 
   &__wrapper {
@@ -12,7 +12,7 @@
   }
 
   &__header {
-    margin-bottom: 40px;
+    margin-bottom: 32px;
 
     font-size: 18px;
     font-weight: bold;
@@ -22,7 +22,8 @@
   }
 
   &__list {
-    margin-bottom: 42px;
+    margin-bottom: 5px;
+    padding-bottom: 30px;
     font-size: 15px;
   }
 
@@ -38,7 +39,7 @@
   &__map {
     width: $mobile-width;
     height: 457px;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 
     background: $light-grey;
   }
@@ -48,10 +49,25 @@
   }
 }
 
+.contacts__item-link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  border-bottom: 1px solid $greeny-blue;
+
+  &:hover {
+    color: $greeny-blue;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 @media (min-width: $tablet-width) {
   .contacts {
     width: $tablet-width;
-    margin-top: 46px;
+    margin-top: 40px;
     padding-bottom: 57px;
 
     &__wrapper {
@@ -60,20 +76,12 @@
 
     &__header {
       margin-top: 20px;
-      margin-bottom: 55px;
+      margin-bottom: 48px;
       @include tablet-big-font;
     }
 
     &__list {
-      width: 100%;
-      margin-bottom: 60px;
-
       font-size: 17px;
-    }
-
-    &__field {
-      float: left;
-      width: 50%;
     }
 
     &__map {
@@ -103,21 +111,21 @@
 
     &__header {
       margin-top: 73px;
-      margin-bottom: 17px;
+      margin-bottom: 45px;
       @include desktop-big-font;
     }
 
     &__list {
+      width: auto;
       margin-bottom: 10px;
-      border-spacing: 0 30px;
-    }
 
-    &__field {
-      float: none;
+      tbody {
+        display: table-row-group;
+      }
     }
 
     &__item-name {
-      width: 23%;
+      padding-bottom: 30px;
     }
 
     &__map {

@@ -3,11 +3,33 @@
   border: 2px solid $btn-border-color;
 
   font-family: $page-font;
-  font-size: $page-font-size;
+  font-size: 18px;
   font-weight: bold;
   line-height: 20px;
   text-transform: uppercase;
 
   background-color: transparent;
   color: $page-font-color;
+
+  cursor: pointer;
+}
+
+@media (min-width: $tablet-width) {
+  .btn {
+    font-size: 17px;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .btn {
+    &:hover {
+      color: white;
+      background-color: #444444;
+    }
+
+    &:active {
+      color: #8d8d8d;
+      background-color: #444444;
+    }
+  }
 }
