@@ -176,5 +176,20 @@
       </a>
     </div>
   </footer>
+  <script type="text/javascript">
+    "use strict";
+
+    var menu = document.querySelector('.page-header__menu'),
+        toggle = menu.querySelector('.page-header__menu-toggle');
+
+    menu.classList.remove('page-header__menu--nojs');
+    menu.classList.remove('page-header__menu--opened');
+    menu.classList.add('page-header__menu--closed');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('page-header__menu--opened');
+      menu.classList.toggle('page-header__menu--closed');
+    });
+  </script>
 </body>
 </html>

@@ -17,6 +17,7 @@
 
     &__title {
       @include tablet-big-font;
+      padding-top: 20px;
     }
   }
 }
@@ -27,6 +28,7 @@
 
     &__title {
       @include desktop-big-font;
+      padding-top: 0;
     }
   }
 }
