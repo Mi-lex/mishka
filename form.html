@@ -55,7 +55,7 @@
   <main class="page-main">
     <div class="subheader">
       <h1 class="subheader__title">
-        Каталог товаров
+        Вязание на заказ
       </h1>
     </div>
     <form action="post" class="form">
@@ -68,12 +68,12 @@
         <div class="form__item-wrapper">
           <legend class="form__item-title">Тип</legend>
           <div class="form__item-content">
-            <label>
+            <label class="form__field form__field--type">
               Акессуар для интерьера
               <input type="radio" name="type" value="interior" checked>
               <span class="form__radio-mark"></span>
             </label>
-            <label>
+            <label class="form__field form__field--type">
               Детская игрушка
               <input type="radio" name="type" value="toy">
               <span class="form__radio-mark"></span>
@@ -84,37 +84,37 @@
 
       <fieldset class="form__item form__item--color">
         <div class="form__item-wrapper">
-          <legend class="form__item-title">Цвета</legend>
+          <legend class="form__item-title">Цвет</legend>
           <div class="form__item-content form__item-content--colors">
-            <label class="form__item-color-field">
+            <label class="form__field form__field--color">
               Белый
               <input type="checkbox" name="color" value="white" checked>
-              <span class="checkmark"></span>
+              <span class="form__checkmark"></span>
             </label>
-            <label class="form__item-color-field">
+            <label class="form__field form__field--color">
               Серый
               <input type="checkbox" name="color" value="grey" checked>
-              <span class="checkmark"></span>
+              <span class="form__checkmark"></span>
             </label>
-            <label class="form__item-color-field">
+            <label class="form__field form__field--color">
               «Тиффани»
               <input type="checkbox" name="color" value="tiffani">
-              <span class="checkmark"></span>
+              <span class="form__checkmark"></span>
             </label>
-            <label class="form__item-color-field">
+            <label class="form__field form__field--color">
               Черный
               <input type="checkbox" name="color" value="black">
-              <span class="checkmark"></span>
+              <span class="form__checkmark"></span>
             </label>
-            <label class="form__item-color-field">
+            <label class="form__field form__field--color">
               Розовый
               <input type="checkbox" name="color" value="pink">
-              <span class="checkmark"></span>
+              <span class="form__checkmark"></span>
             </label>
-            <label class="form__item-color-field">
+            <label class="form__field form__field--color">
               Оранжевый
               <input type="checkbox" name="color" value="orange">
-              <span class="checkmark"></span>
+              <span class="form__checkmark"></span>
             </label>
           </div>
         </div>
@@ -124,15 +124,15 @@
         <div class="form__item-wrapper">
           <legend class="form__item-title">ФИО</legend>
           <div class="form__item-content">
-            <label>
+            <label class="form__field form__field--name">
               Имя:
               <input type="text" name="name" required placeholder="Введите ваше имя*">
             </label>
-            <label>
+            <label class="form__field form__field--name">
               Фамилия:
               <input type="text" name="surname" required placeholder="Укажите фамилию*">
             </label>
-            <label>
+            <label class="form__field form__field--name">
               Отчество:
               <input type="text" name="surname" placeholder="Отчество, если желаете*">
             </label>
@@ -143,16 +143,16 @@
       <fieldset class="form__item form__item--contacts">
         <div class="form__item-wrapper">
           <label for="number" class="form__item-title">
-            Тел:
+            Тел
           </label>
-          <div class="form__item-content">
-            <input type="number" id="number" name="number" required placeholder="+7 XXX XX XX*">
+          <div class="form__item-content form__item-content--contacts">
+            <input class="form__field form__field--number" type="number" id="number" name="number" required placeholder="+7 XXX XX XX*">
           </div>
           <label for="email" class="form__item-title">
             E-mail
           </label>
-          <div class="form__item-content">
-            <input type="email" name="email" id="email" required placeholder="Ваш Email*">
+          <div class="form__item-content form__item-content--contacts">
+            <input class="form__field form__field--email" type="email" name="email" id="email" required placeholder="Ваш Email*">
           </div>
         </div>
       </fieldset>
@@ -161,19 +161,20 @@
           <legend class="form__item-title">
             Доп
           </legend>
-          <textarea name="extra-info" rows="8" cols="10"
-          placeholder="Опишите все ваши пожелания к заказу">
-        </textarea>
+          <div class="form__item-content">
+            <textarea class="form__extra-info" name="extra-info" rows="5" cols="27"
+            placeholder="Опишите все ваши пожелания к заказу"></textarea>
+          </div>
+        </div>
+        <div class="form__footer">
+          <small class="form__note">
+            *Поля обязательны для заполнения
+          </small>
+          <button class="form__make-order btn">
+            Отправить заказ
+          </button>
         </div>
       </fieldset>
-      <div class="form__footer">
-        <small class="form__note">
-          *Поля обязательны для заполнения
-        </small>
-        <button class="form__make-order btn">
-          Отправить заказ
-        </button>
-      </div>
     </form>
   </main>
 
@@ -209,5 +210,20 @@
       </a>
     </div>
   </footer>
+  <script type="text/javascript">
+    "use strict";
+
+    var menu = document.querySelector('.page-header__menu'),
+        toggle = menu.querySelector('.page-header__menu-toggle');
+
+    menu.classList.remove('page-header__menu--nojs');
+    menu.classList.remove('page-header__menu--opened');
+    menu.classList.add('page-header__menu--closed');
+
+    toggle.addEventListener('click', () => {
+      menu.classList.toggle('page-header__menu--opened');
+      menu.classList.toggle('page-header__menu--closed');
+    });
+  </script>
 </body>
 </html>
