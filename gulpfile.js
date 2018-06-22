@@ -42,7 +42,7 @@ gulp.task("html:update", ["html:copy"], function(done) {
 gulp.task("serve", ["style"], function() {
   server.init({
     server: "build/",
-    index: "catalog.html",
+    index: "index.html",
     notify: false,
     open: true,
     cors: true,

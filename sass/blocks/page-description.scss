@@ -1,49 +1,64 @@
 .page-description {
-  background: $light-grey url("../img/hero-mobile.jpg") no-repeat center top;
+  margin-bottom: -102px;
 
   &__wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: $mobile-wrapper-width;
-    height: 280px;
-    margin: 0 auto;
-  }
+    width: 100%;
+    height: 382px;
+    padding-top: 50px;
 
-  &__delivery {
-    display: none;
-    align-self: flex-end;
+    background: $light-grey;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-image: url("../img/hero-mobile@1x.jpg");
+
+    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+    }
   }
 
   &__text {
-    margin: 0;
-    padding: 75px 0;
-    @include mobile-big-font;
+    width: 260px;
+    margin: 0 auto;
+    padding: 20px 0;
+
+    font-size: 27px;
+    font-weight: bold;
+    line-height: 30px;
+    color: black;
     text-align: center;
   }
 }
 
 @media (min-width: $tablet-width) {
   .page-description {
-    background: url("../img/hero-desktop.jpg") no-repeat center top;
+    margin-bottom: -114px;
+
     &__wrapper {
-      min-width: $tablet-wrapper-width;
-      height: 627px;
+      min-width: $tablet-width;
+      height: 742px;
+      padding-top: 134px;
+
+      background-image: url("../img/hero-tablet@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+      }
     }
 
-    &__delivery {
-      align-self: flex-end;
-      display: inline-block;
-      padding: 18px 0;
-      border: none;
-
-      font-size: 15px;
-      font-weight: normal;
-      line-height: 24px;
-    }
+    // &__delivery {
+    //   align-self: flex-end;
+    //   display: inline-block;
+    //   padding: 18px 0;
+    //   border: none;
+    //
+    //   font-size: 15px;
+    //   font-weight: normal;
+    //   line-height: 24px;
+    // }
 
     &__text {
-      padding: 92px 0;
+      width: 668px;
       @include tablet-big-font;
     }
   }
@@ -51,8 +66,17 @@
 
 @media (min-width: $desktop-width) {
   .page-description {
+    margin-bottom: -114px;
+
     &__wrapper {
-      width: $desktop-wrapper-width;
+      width: $desktop-width + 100px;
+      margin: 0 auto;
+
+      background-image: url("../img/hero-desktop@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/hero-desktop@2x.jpg");
+      }
     }
 
     &__text {

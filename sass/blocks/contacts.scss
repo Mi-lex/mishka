@@ -11,19 +11,8 @@
     width: $mobile-wrapper-width;
   }
 
-  &__header {
-    margin-bottom: 32px;
-
-    font-size: 18px;
-    font-weight: bold;
-    line-height: 30px;
-
-    color: black;
-  }
-
   &__list {
-    margin-bottom: 5px;
-    padding-bottom: 30px;
+    margin-bottom: 35px;
     font-size: 15px;
   }
 
@@ -47,6 +36,16 @@
   &__write-us {
     width: $mobile-wrapper-width;
   }
+}
+
+.contacts__header {
+  margin-bottom: 32px;
+
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 30px;
+
+  color: black;
 }
 
 .contacts__item-link {
@@ -74,16 +73,6 @@
       width: $tablet-wrapper-width;
     }
 
-    &__header {
-      margin-top: 20px;
-      margin-bottom: 48px;
-      @include tablet-big-font;
-    }
-
-    &__list {
-      font-size: 17px;
-    }
-
     &__map {
       width: $tablet-width;
       margin-bottom: 54px;
@@ -92,6 +81,70 @@
     &__write-us {
       width: 230px;
     }
+  }
+
+  .contacts__header {
+    position: relative;
+
+    margin-top: 20px;
+    margin-bottom: 48px;
+    @include tablet-big-font;
+
+    .contacts__flag {
+      position: absolute;
+      top: -15px;
+      right: 0;
+
+      width: 47px;
+      height: 81px;
+
+      &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+
+        content: "";
+
+        display: block;
+        width: 4px;
+        height: 100%;
+
+        background-color: #221f1f;
+      }
+
+      &::after {
+        position: absolute;
+        top: 4px;
+        left: 8px;
+
+        content: "";
+
+        display: block;
+
+        border-top: 19px solid transparent;
+        border-bottom: 19px solid transparent;
+        border-right: 40px solid transparent;
+        border-left: 40px solid #62d1ba;
+      }
+    }
+  }
+
+  .contacts__list {
+    width: 100%;
+    margin-bottom: 50px;
+
+    font-size: 17px;
+    tbody {
+      display: flex;
+    }
+  }
+
+  .contacts__field {
+    width: 50%;
+  }
+
+  .contacts__item-name {
+    width: 27%;
   }
 }
 
@@ -107,12 +160,6 @@
 
     &__wrapper {
       width: 350px;
-    }
-
-    &__header {
-      margin-top: 73px;
-      margin-bottom: 45px;
-      @include desktop-big-font;
     }
 
     &__list {
@@ -136,6 +183,17 @@
     &__write-us {
       width: 230px;
       margin-top: -52px;
+    }
+  }
+
+  .contacts__header {
+    margin-top: 73px;
+    margin-bottom: 45px;
+    @include desktop-big-font;
+
+    .contacts__flag {
+      top: -7px;
+      left: -107px;
     }
   }
 }

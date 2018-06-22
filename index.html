@@ -9,22 +9,25 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo page-header__logo--mobile">
-      <img src="/img/mishka-logo-mobile.svg" alt="Мишка">
-    </a>
     <div class="page-header__menu page-header__menu--opened page-header__menu--nojs">
       <button class="page-header__menu-toggle">
         <span class="visually-hidden">
           Открыть меню
         </span>
       </button>
-      <a class="page-header__logo">
-        <img src="/img/mishka-logo-desktop.svg" alt="Мишка">
+      <a href="index.html" class="page-header__logo page-header__logo--active">
+        <picture>
+          <source media="(min-width: 1150px)"
+                  srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)"
+                  srcset="img/logo-tablet.svg">
+          <img src="img/mishka-logo-mobile.svg" alt="Логотип сайта">
+        </picture>
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active main-nav__link--primary" href="#">Каталог товаров</a>
+            <a href="catalog.html" class="main-nav__link main-nav__link main-nav__link--primary" href="#">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--primary" href="#">Вязание на заказ</a>
@@ -55,9 +58,6 @@
   <main class="page-main">
     <section class="page-description">
       <div class="page-description__wrapper">
-        <strong class="page-description__delivery">
-          Бесплатная доставка по России
-        </strong>
         <p class="page-description__text">
           Милые штуки ручной<br>
           работы для дома
@@ -113,7 +113,15 @@
             </table>
           </section>
           <figure class="popular-product__picture">
-            <img src="zaglushka.img" alt="Вязаные корзинки" height="315px">
+            <picture>
+              <source media="(min-width: 1150px)"
+                      srcset="img/triple-set-desktop@1x.jpg 1x,
+                              img/triple-set-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="img/triple-set-tablet@1x.jpg 1x,
+                              img/triple-set-tablet@2x.jpg 2x">
+              <img src="img/triple-set-mobile@1x.jpg" srcset="img/triple-set-mobile@2x.jpg 2x" alt="Вязаные корзинки">
+            </picture>
           </figure>
           <section class="popular-product__shop">
             <b class="popular-product__price">
@@ -200,6 +208,9 @@
       <div class="contacts__wrapper">
         <header class="contacts__header">
           Контакты
+          <div class="contacts__flag">
+
+          </div>
         </header>
         <table class="contacts__list">
           <tr class="contacts__field">
@@ -225,7 +236,8 @@
         </table>
       </div>
       <div class="contacts__map">
-
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0c5f10e837a2a19ec9fc00de43426ad571a69c8112d8b94467c9ca14eb4a91ed&amp;width=100%25&amp;height=457&amp;lang=en_FR&amp;scroll=true">
+        </script>
       </div>
       <button class="btn contacts__write-us">
         Напишите нам
@@ -235,7 +247,7 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a href="#" class="page-footer__logo">
-        <img src="zaglushka" alt="Мишка">
+        <img src="img/logo-footer.svg" alt="Мишка">
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item">

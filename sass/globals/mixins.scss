@@ -26,16 +26,16 @@
 
   cursor: pointer;
 
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
-  }
-
   @media (min-width: $tablet-width) {
     background-color: transparent;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
   }
 }
 

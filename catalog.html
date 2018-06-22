@@ -9,17 +9,20 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo page-header__logo--mobile">
-      <img src="/img/mishka-logo-mobile.svg" alt="Мишка">
-    </a>
     <div class="page-header__menu page-header__menu--opened page-header__menu--nojs">
       <button class="page-header__menu-toggle">
         <span class="visually-hidden">
           Открыть меню
         </span>
       </button>
-      <a class="page-header__logo">
-        <img src="/img/mishka-logo-desktop.svg" alt="Мишка">
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1150px)"
+                  srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)"
+                  srcset="img/logo-tablet.svg">
+          <img src="img/mishka-logo-mobile.svg" alt="Логотип сайта">
+        </picture>
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
@@ -61,7 +64,17 @@
     <section class="catalog-list">
       <a class="catalog-list__item catalog-list__item--rabbit">
         <figure class="catalog-list__item-picture">
-          <img class="catalog-list__item-img" src="zaglushka" alt="Зайка-попрыгайчик">
+          <div class="catalog-list__item-img">
+            <picture>
+              <source media="(min-width: 1150px)"
+                      srcset="img/photo-1-desktop@1x.jpg 1x,
+                              img/photo-1-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="img/photo-1-tablet@1x.jpg 1x,
+                              img/photo-1-tablet@2x.jpg 2x">
+              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайка-попрыгайчик">
+            </picture>
+          </div>
           <figcaption class="catalog-list__item-description">
             <div>
               <b class="catalog-list__item-name">
@@ -80,7 +93,17 @@
 
       <a class="catalog-list__item catalog-list__item--laundry-basket">
         <figure class="catalog-list__item-picture">
-          <img class="catalog-list__item-img" src="zaglushka" alt="Зайка-попрыгайчик">
+          <div class="catalog-list__item-img">
+            <picture>
+              <source media="(min-width: 1150px)"
+                      srcset="img/photo-2-desktop@1x.jpg 1x,
+                              img/photo-2-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="img/photo-2-tablet@1x.jpg 1x,
+                              img/photo-2-tablet@2x.jpg 2x">
+              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья">
+            </picture>
+          </div>
           <figcaption class="catalog-list__item-description">
             <div>
               <b class="catalog-list__item-name">
@@ -99,7 +122,17 @@
 
       <a class="catalog-list__item catalog-list__item--toys-basket">
         <figure class="catalog-list__item-picture">
-          <img class="catalog-list__item-img" src="zaglushka" alt="Зайка-попрыгайчик">
+          <div class="catalog-list__item-img">
+            <picture>
+              <source media="(min-width: 1150px)"
+                      srcset="img/photo-3-desktop@1x.jpg 1x,
+                              img/photo-3-desktop@2x.jpg 2x">
+              <source media="(min-width: 768px)"
+                      srcset="img/photo-3-tablet@1x.jpg 1x,
+                              img/photo-3-tablet@2x.jpg 2x">
+              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Корзинка для белья">
+            </picture>
+          </div>
           <figcaption class="catalog-list__item-description">
             <div>
               <b class="catalog-list__item-name">
@@ -119,7 +152,15 @@
     </section>
     <article class="crafting">
       <section class="crafting__video">
-
+        <picture>
+          <source media="(min-width: 1150px)"
+                  srcset="img/video-desktop@1x.jpg 1x,
+                          img/video-desktop@2x.jpg 2x">
+          <source media="(min-width: 768px)"
+                  srcset="img/video-tablet@1x.jpg 1x,
+                          img/video-tablet@2x.jpg 2x">
+          <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Корзинка для белья">
+        </picture>
       </section>
       <div class="crafting__wrapper">
         <header class="crafting__header">

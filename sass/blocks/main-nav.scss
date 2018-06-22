@@ -11,6 +11,11 @@
     width: 100%;
     border: 1px solid $grey-border;
     border-bottom: none;
+
+    &--active {
+      pointer-events: none;
+      cursor: default;
+    }
   }
 
   &__link--primary {
@@ -42,7 +47,7 @@
 
 @media (min-width: $desktop-width) {
   .main-nav {
-    width: 445px;
+    width: 442px;
     order: 0;
 
     &__item {

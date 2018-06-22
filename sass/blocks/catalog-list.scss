@@ -111,10 +111,6 @@
     width: $desktop-wrapper-width;
     margin-top: 130px;
 
-    &__item {
-      width: auto;
-    }
-
     &__item-picture {
       flex-direction: column;
       height: 100%;
@@ -136,6 +132,20 @@
     &__price {
       padding-top: 18px;
       padding-left: 0;
+    }
+  }
+
+  .catalog-list__item {
+    width: auto;
+
+    cursor: pointer;
+
+    &:hover {
+      box-shadow: 0 8px 10px 0 #ebebeb;
+    }
+
+    &:active {
+      box-shadow: 0 3px 2px 0 #ebebeb;
     }
   }
 }

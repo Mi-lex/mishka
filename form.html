@@ -9,17 +9,20 @@
 </head>
 <body>
   <header class="page-header">
-    <a class="page-header__logo page-header__logo--mobile">
-      <img src="/img/mishka-logo-mobile.svg" alt="Мишка">
-    </a>
     <div class="page-header__menu page-header__menu--opened page-header__menu--nojs">
       <button class="page-header__menu-toggle">
         <span class="visually-hidden">
           Открыть меню
         </span>
       </button>
-      <a class="page-header__logo">
-        <img src="/img/mishka-logo-desktop.svg" alt="Мишка">
+      <a href="index.html" class="page-header__logo">
+        <picture>
+          <source media="(min-width: 1150px)"
+                  srcset="img/logo-desktop.svg">
+          <source media="(min-width: 768px)"
+                  srcset="img/logo-tablet.svg">
+          <img src="img/mishka-logo-mobile.svg" alt="Логотип сайта">
+        </picture>
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
