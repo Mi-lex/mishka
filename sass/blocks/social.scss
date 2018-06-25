@@ -3,16 +3,39 @@
   align-items: center;
   justify-content: space-around;
   @include custom-list;
+}
 
-  &__link {
-    display: block;
-    width: 40px;
-    height: 40px;
+.social__link {
+  position: relative;
 
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
+  display: block;
+  width: 40px;
+  height: 40px;
 
-    background-color: grey;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+
+  .social__icon {
+    position: absolute;
+
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .social__link:hover {
+    .social__icon {
+      fill: $greeny-blue;
+    }
+  }
+
+  .social__link:active {
+    .social__icon {
+      opacity: 0.3;
+    }
   }
 }

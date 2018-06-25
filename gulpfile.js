@@ -41,7 +41,7 @@ gulp.task("style", function() {
     .pipe(csso())
     .pipe(rename("style-min.css"))
     .pipe(gulp.dest("build/css"))
-    .pipe(server.stream());
+    .pipe(server.reload({ stream: true }));
 });
 
 gulp.task("html", function() {
@@ -56,8 +56,16 @@ gulp.task("image:minify", function() {
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
       imagemin.jpegtran({progressive: true}),
-      imagemin.svgo()
-    ]))
+      imagemin.svgo({
+        plugins: [
+          { optimizationLevel: 3 },
+          { progessive: true },
+          { interlaced: true },
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: true },
+          { cleanupIDs: false }
+       ]
+      })]))
     .pipe(gulp.dest("build/img"));
 })
 
@@ -88,7 +96,7 @@ gulp.task("js", function() {
 gulp.task("serve", function() {
   server.init({
     server: "build/",
-    index: "index.html",
+    index: "form.html",
     notify: false,
     open: true,
     cors: true,
@@ -96,7 +104,7 @@ gulp.task("serve", function() {
   });
 
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html", ["html"]).on('change', server.reload);
+  gulp.watch("*.html", ["html"]).on("change", server.reload);
 });
 
 gulp.task ("build", function(done) {

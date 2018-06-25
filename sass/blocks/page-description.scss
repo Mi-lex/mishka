@@ -3,7 +3,7 @@
 
   &__wrapper {
     width: 100%;
-    height: 382px;
+    height: 384px;
     padding-top: 50px;
 
     background: $light-grey;
@@ -45,17 +45,6 @@
         background-image: url("../img/index/hero-tablet@2x.jpg");
       }
     }
-
-    // &__delivery {
-    //   align-self: flex-end;
-    //   display: inline-block;
-    //   padding: 18px 0;
-    //   border: none;
-    //
-    //   font-size: 15px;
-    //   font-weight: normal;
-    //   line-height: 24px;
-    // }
 
     &__text {
       width: 668px;

@@ -35,6 +35,8 @@
   }
 
   &-content {
+    position: relative;
+
     display: flex;
     flex-direction: column;
   }
@@ -106,7 +108,7 @@
 
   input {
     width: 100%;
-    margin-top: 14px;
+    padding-top: 15px;
     padding-bottom: 16px;
     border: none;
     border-bottom: 2px solid black;
@@ -154,6 +156,25 @@
     color: inherit;
     opacity: 0.3;
   }
+}
+
+.form__field--number:hover ~ .form__contact-icon,
+.form__field--email:hover ~ .form__contact-icon {
+  fill: $greeny-blue;
+}
+
+.form__field--number:focus ~ .form__contact-icon,
+.form__field--email:focus ~ .form__contact-icon {
+  fill: $greeny-blue;
+}
+
+.form__contact-icon {
+  position: absolute;
+  top: -8px;
+  right: 0;
+
+  fill: #cccccc;
+  z-index: 1;
 }
 
 .form__field--type input:checked ~ .form__radio-mark::after {
@@ -357,6 +378,10 @@
     }
   }
 
+  .form__contact-icon {
+    top: 10px;
+  }
+
   .form__field--name {
     display: flex;
     align-items: baseline;
@@ -468,6 +493,11 @@
     &--email {
       width: 700px;
     }
+  }
+
+  .form__contact-icon {
+    top: 10px;
+    right: 180px;
   }
 
   .form__field:hover [class$="mark"] {

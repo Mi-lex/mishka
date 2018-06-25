@@ -13,7 +13,21 @@
 
 @media (min-width: $tablet-width) {
   .subheader {
+    position: relative;
     height: 226px;
+
+    &::after {
+      position: absolute;
+      bottom: -1px;
+      z-index: 1;
+
+      content: "";
+      height: 24px;
+      width: 100%;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-size: contain;
+    }
 
     &__title {
       @include tablet-big-font;
@@ -25,6 +39,10 @@
 @media (min-width: $desktop-width) {
   .subheader {
     height: 253px;
+
+    &::after {
+      height: 34px;
+    }
 
     &__title {
       @include desktop-big-font;

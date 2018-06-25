@@ -27,6 +27,7 @@
   .main-nav {
     width: 334px;
     order: 2;
+    z-index: 1;
 
     &__list {
       flex-direction: row;

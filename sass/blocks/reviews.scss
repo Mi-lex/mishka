@@ -1,5 +1,5 @@
 .reviews {
-  margin-top: 30px;
+  margin-top: 16px;
   padding-bottom: 52px;
 
   &__wrapper {
@@ -107,31 +107,49 @@
 }
 
 
-
-
 @media (min-width: $tablet-width) {
   .reviews {
-    width: $tablet-width;
-    margin: 0 auto;
+    position: relative;
+
     margin-top: 27px;
-    margin-bottom: 123px;
-    padding-top: 80px;
-    padding-bottom: 50px;
+    margin-bottom: 44px;
+    padding-bottom: 85px;
 
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-image: url("../img/review@1x.jpg");
 
-    @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
-      background-image: url("../img/review@2x.jpg");
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+
+      z-index: 1;
+      height: 17px;
+      width: 100%;
+      content: "";
+
+      background-image: url("../img/bg-zigzag-line.svg");
+      background-size: contain;
     }
+
 
     &__wrapper {
       position: relative;
+
+      width: $tablet-width;
+      padding: 50px;
+      padding-top: 80px;
+      padding-bottom: 0;
+
       display: flex;
       justify-content: space-between;
       flex-wrap: wrap;
-      width: $tablet-wrapper-width;
+
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-image: url("../img/index/review@1x.jpg");
+
+      @media (min-resolution: $retina-dpi), (min-resolution: $retina-dppx) {
+        background-image: url("../img/index/review@2x.jpg");
+      }
     }
 
     &__header {
@@ -145,7 +163,7 @@
 
     &__write {
       order: 1;
-      width: 175px;
+      width: 174px;
     }
 
     &__list {
@@ -165,13 +183,12 @@
   }
 
   .reviews__controlls {
-    position: absolute;
-    right: 0;
-    bottom: 5px;
-
     order: 3;
     width: 176px;
     margin: 0;
+    margin-left: auto;
+
+    transform: translateY(-110%);
   }
 
   .reviews__controller {
@@ -190,15 +207,18 @@
 
 @media (min-width: $desktop-width) {
   .reviews {
-    width: $desktop-wrapper-width;
-    margin-top: 36px;
-    padding-top: 72px;
-    padding-bottom: 205px;
+    margin-top: 35px;
+
+    &::after {
+      height: 23px;
+    }
 
     &__wrapper {
-      width: 875px;
-      margin: 0;
-      margin-left: 175px;
+      width: $desktop-wrapper-width;
+      padding-top: 72px;
+      padding-right: 0;
+      padding-left: 175px;
+      padding-bottom: 50px;
     }
 
     &__header {
@@ -212,6 +232,10 @@
     &__text {
       width: 775px;
       margin-bottom: 35px;
+    }
+
+    &__write {
+      margin-top: 5px;
     }
   }
 }

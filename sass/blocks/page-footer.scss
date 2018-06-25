@@ -15,7 +15,7 @@
   }
 
   &__social-list {
-    width: 175px;
+    width: 185px;
     height: 80px;
     border-bottom: 1px solid $grey-border;
   }
@@ -35,25 +35,29 @@
   &-text {
     margin-right: 26px;
   }
+}
 
-  &-icon {
-    display: inline-block;
-    width: 32px;
+.page-footer__copyright-icon {
+  position: relative;
+
+  display: inline-block;
+  width: 32px;
+  height: 34px;
+
+  vertical-align: top;
+  font-size: 0;
+  line-height: 0;
+  color: transparent;
+
+  &::before {
+    position: absolute;
+    left: 0;
+    content: "";
+
+    width: 27px;
     height: 34px;
-    background-color: #63d1bb;
-
-    vertical-align: top;
-    font-size: 0;
-    line-height: 0;
-    color: transparent;
-  }
-
-  &:hover {
-    opacity: 0.6;
-  }
-
-  &:active {
-    opacity: 0.3;
+    opacity: 0.7;
+    background-image: url("../img/logo-htmlacademy.svg");
   }
 }
 
@@ -67,16 +71,42 @@
       justify-content: space-between;
     }
 
-    &__logo {
-      display: block;
-      width: 102px;
-      height: 34px;
-      margin-right: 90px;
-    }
-
     &__social-list {
       width: 182px;
     }
+  }
+
+  .page-footer__logo {
+    display: block;
+    width: 102px;
+    height: 34px;
+    margin-right: 90px;
+
+    &:hover {
+      fill: #46c1ae;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .page-footer__copyright {
+    padding-top: 28px;
+
+    &-text {
+      margin-right: 20px;
+    }
+  }
+
+  .page-footer__copyright:hover {
+    .page-footer__copyright-icon::before {
+      opacity: 1;
+    }
+  }
+
+  .page-footer__copyright:active {
+    opacity: 0.3;
   }
 }
 

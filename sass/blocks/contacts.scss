@@ -5,7 +5,7 @@
   width: $mobile-width;
   margin: 0 auto;
   margin-top: 35px;
-  padding-bottom: 40px;
+  padding-bottom: 38px;
 
   &__wrapper {
     width: $mobile-wrapper-width;
@@ -19,6 +19,7 @@
   &__item-name {
     vertical-align: top;
     width: 30%;
+    padding-bottom: 28px;
   }
 
   &__item-value {
@@ -39,7 +40,7 @@
 }
 
 .contacts__header {
-  margin-bottom: 32px;
+  margin-bottom: 22px;
 
   font-size: 18px;
   font-weight: bold;
@@ -87,7 +88,7 @@
     position: relative;
 
     margin-top: 20px;
-    margin-bottom: 48px;
+    margin-bottom: 43px;
     @include tablet-big-font;
 
     .contacts__flag {
@@ -154,8 +155,8 @@
     align-items: flex-start;
     flex-wrap: wrap;
     width: $desktop-wrapper-width;
-    margin-top: 46px;
-    padding-left: 175px;
+    margin-top: 71px;
+    padding-left: 172px;
     padding-bottom: 105px;
 
     &__wrapper {
@@ -172,6 +173,7 @@
     }
 
     &__item-name {
+      width: 25%;
       padding-bottom: 30px;
     }
 

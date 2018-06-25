@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mishka catalog</title>
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-min.css">
 </head>
 <body>
   <header class="page-header">
@@ -15,19 +15,19 @@
           Открыть меню
         </span>
       </button>
-      <a href="index.html" class="page-header__logo">
+      <a href="index.html" class="page-header__logo page-header__logo--active">
         <picture>
           <source media="(min-width: 1150px)"
                   srcset="img/logo-desktop.svg">
           <source media="(min-width: 768px)"
                   srcset="img/logo-tablet.svg">
-          <img src="img/mishka-logo-mobile.svg" alt="Логотип сайта">
+          <img src="img/logo-mobile.svg" alt="Логотип сайта" role="img">
         </picture>
       </a>
       <nav class="main-nav">
         <ul class="main-nav__list">
           <li class="main-nav__item">
-            <a class="main-nav__link main-nav__link--active main-nav__link--primary" href="#">Каталог товаров</a>
+            <a href="catalog.html" class="main-nav__link main-nav__link main-nav__link--primary" href="#">Каталог товаров</a>
           </li>
           <li class="main-nav__item">
             <a class="main-nav__link main-nav__link--primary" href="#">Вязание на заказ</a>
@@ -43,15 +43,24 @@
       <ul class="page-header__user-list">
         <li class="page-header__search">
           <a class="page-header__search-btn">
+            <svg width="18" height="18" class="page-header__icon page-header__icon--search">
+              <use xlink:href="img/sprite.svg#icon-search"></use>
+            </svg>
             Поиск по сайту
           </a>
         </li>
         <li class="page-header__basket">
           <button class="page-header__basket-btn page-header__basket-btn--empty">
+            <svg width="21" height="18" class="page-header__icon page-header__icon--basket">
+              <use xlink:href="img/sprite.svg#icon-cart"></use>
+            </svg>
             Корзина: <b>пока пуста</b>
           </button>
         </li>
       </ul>
+      <strong class="page-header__delivery">
+          Бесплатная доставка по России
+      </strong>
     </div>
   </header>
 
@@ -67,12 +76,12 @@
           <div class="catalog-list__item-img">
             <picture>
               <source media="(min-width: 1150px)"
-                      srcset="img/photo-1-desktop@1x.jpg 1x,
-                              img/photo-1-desktop@2x.jpg 2x">
+                      srcset="img/catalog/photo-1-desktop@1x.jpg 1x,
+                              img/catalog/photo-1-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
-                      srcset="img/photo-1-tablet@1x.jpg 1x,
-                              img/photo-1-tablet@2x.jpg 2x">
-              <img src="img/photo-1-mobile@1x.jpg" srcset="img/photo-1-mobile@2x.jpg 2x" alt="Зайка-попрыгайчик">
+                      srcset="img/catalog/photo-1-tablet@1x.jpg 1x,
+                              img/catalog/photo-1-tablet@2x.jpg 2x">
+              <img src="img/catalog/photo-1-mobile@1x.jpg" srcset="img/catalog/photo-1-mobile@2x.jpg 2x" alt="Зайка-попрыгайчик">
             </picture>
           </div>
           <figcaption class="catalog-list__item-description">
@@ -85,6 +94,9 @@
               </span>
             </div>
             <strong class="catalog-list__price">
+              <svg width="21" height="18" class="catalog-list__icon">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
               1 200 руб.
             </strong>
           </figcaption>
@@ -96,12 +108,12 @@
           <div class="catalog-list__item-img">
             <picture>
               <source media="(min-width: 1150px)"
-                      srcset="img/photo-2-desktop@1x.jpg 1x,
-                              img/photo-2-desktop@2x.jpg 2x">
+                      srcset="img/catalog/photo-2-desktop@1x.jpg 1x,
+                              img/catalog/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
-                      srcset="img/photo-2-tablet@1x.jpg 1x,
-                              img/photo-2-tablet@2x.jpg 2x">
-              <img src="img/photo-2-mobile@1x.jpg" srcset="img/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                      srcset="img/catalog/photo-2-tablet@1x.jpg 1x,
+                              img/catalog/photo-2-tablet@2x.jpg 2x">
+              <img src="img/catalog/photo-2-mobile@1x.jpg" srcset="img/catalog/photo-2-mobile@2x.jpg 2x" alt="Корзинка для белья">
             </picture>
           </div>
           <figcaption class="catalog-list__item-description">
@@ -114,6 +126,9 @@
               </span>
             </div>
             <strong class="catalog-list__price">
+              <svg width="21" height="18" class="catalog-list__icon">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
               690 руб.
             </strong>
           </figcaption>
@@ -125,12 +140,12 @@
           <div class="catalog-list__item-img">
             <picture>
               <source media="(min-width: 1150px)"
-                      srcset="img/photo-3-desktop@1x.jpg 1x,
-                              img/photo-3-desktop@2x.jpg 2x">
+                      srcset="img/catalog/photo-3-desktop@1x.jpg 1x,
+                              img/catalog/photo-3-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
-                      srcset="img/photo-3-tablet@1x.jpg 1x,
-                              img/photo-3-tablet@2x.jpg 2x">
-              <img src="img/photo-3-mobile@1x.jpg" srcset="img/photo-3-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                      srcset="img/catalog/photo-3-tablet@1x.jpg 1x,
+                              img/catalog/photo-3-tablet@2x.jpg 2x">
+              <img src="img/catalog/photo-3-mobile@1x.jpg" srcset="img/catalog/photo-3-mobile@2x.jpg 2x" alt="Большая корзинка для игрушек">
             </picture>
           </div>
           <figcaption class="catalog-list__item-description">
@@ -144,6 +159,9 @@
               </span>
             </div>
             <strong class="catalog-list__price">
+              <svg width="21" height="18" class="catalog-list__icon">
+                <use xlink:href="img/sprite.svg#icon-cart"></use>
+              </svg>
               1 500 руб.
             </strong>
           </figcaption>
@@ -152,18 +170,26 @@
     </section>
     <article class="crafting">
       <section class="crafting__video">
+        <button class="crafting__play-btn">
+          <svg width="102" height="78" class="crafting__play-icon">
+            <use xlink:href="img/sprite.svg#icon-play"></use>
+          </svg>
+        </button>
         <picture>
           <source media="(min-width: 1150px)"
-                  srcset="img/video-desktop@1x.jpg 1x,
-                          img/video-desktop@2x.jpg 2x">
+                  srcset="img/catalog/video-desktop@1x.jpg 1x,
+                          img/catalog/video-desktop@2x.jpg 2x">
           <source media="(min-width: 768px)"
-                  srcset="img/video-tablet@1x.jpg 1x,
-                          img/video-tablet@2x.jpg 2x">
-          <img src="img/video-mobile@1x.jpg" srcset="img/video-mobile@2x.jpg 2x" alt="Корзинка для белья">
+                  srcset="img/catalog/video-tablet@1x.jpg 1x,
+                          img/catalog/video-tablet@2x.jpg 2x">
+          <img src="img/catalog/video-mobile@1x.jpg" srcset="img/catalog/video-mobile@2x.jpg 2x" alt="Процесс производства">
         </picture>
       </section>
       <div class="crafting__wrapper">
         <header class="crafting__header">
+          <svg width="32" height="28" class="crafting__camera-icon">
+            <use xlink:href="img/sprite.svg#icon-video"></use>
+          </svg>
           <h2 class="crafting__title">
             Процесс
             производства
@@ -188,21 +214,32 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper">
       <a href="#" class="page-footer__logo">
-        <img src="zaglushka" alt="Мишка">
+        <svg width="104" height="34" class="page-footer__logo-pic">
+          <use xlink:href="img/logo-footer.svg#logo-footer"></use>
+        </svg>
       </a>
       <ul class="page-footer__social-list social">
         <li class="social__item">
           <a href="#" class="social__link social__link--instagramm">
+            <svg width="22" height="21" class="social__icon">
+              <use xlink:href="img/sprite.svg#icon-insta"></use>
+            </svg>
             Instagramm
           </a>
         </li>
         <li class="social__item">
           <a href="#" class="social__link social__link--facebook">
+            <svg width="15" height="29" class="social__icon">
+              <use xlink:href="img/sprite.svg#icon-fb"></use>
+            </svg>
             Facebook
           </a>
         </li>
         <li class="social__item">
           <a href="#" class="social__link social__link--twitter">
+            <svg width="24" height="20" class="social__icon">
+              <use xlink:href="img/sprite.svg#icon-twitter"></use>
+            </svg>
             Twitter
           </a>
         </li>

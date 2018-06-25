@@ -17,11 +17,7 @@
 @media (min-width: $tablet-width) {
   .btn {
     font-size: 17px;
-  }
-}
 
-@media (min-width: $desktop-width) {
-  .btn {
     &:hover {
       color: white;
       background-color: #444444;

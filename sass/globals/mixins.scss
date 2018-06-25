@@ -30,11 +30,11 @@
     background-color: transparent;
 
     &:hover {
-      opacity: 0.6;
+      color: #8d8d8d;
     }
 
     &:active {
-      opacity: 0.3;
+      color: #cacaca;
     }
   }
 }
