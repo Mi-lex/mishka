@@ -7,6 +7,8 @@ html, body {
 }
 
 body {
+  position: relative;
+
   min-width: $mobile-width;
   margin: 0;
   padding: 0;
