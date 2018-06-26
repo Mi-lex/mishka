@@ -7,9 +7,9 @@
   <title>Mishka</title>
   <link rel="stylesheet" href="css/style-min.css">
   <script>
-    document.createElement( "picture" );
+    document.createElement("picture");
   </script>
-  <script src="js/picturefill.js" async></script>
+  <script src="js/picturefill-min.js" async></script>
 </head>
 <body>
   <header class="page-header">
@@ -146,7 +146,7 @@
             <b class="popular-product__price">
               Цена: 990 руб.
             </b>
-            <button class="btn popular-product__order">
+            <button class="btn popular-product__make-order">
               Заказать
             </button>
           </section>
@@ -359,20 +359,6 @@
       </a>
     </div>
   </footer>
-  <script type="text/javascript">
-    "use strict";
-
-    var menu = document.querySelector('.page-header__menu'),
-        toggle = menu.querySelector('.page-header__menu-toggle');
-
-    menu.classList.remove('page-header__menu--nojs');
-    menu.classList.remove('page-header__menu--opened');
-    menu.classList.add('page-header__menu--closed');
-
-    toggle.addEventListener('click', function() {
-      menu.classList.toggle('page-header__menu--opened');
-      menu.classList.toggle('page-header__menu--closed');
-    });
-</script>
+  <script type="text/javascript" src="js/script-min.js"></script>
 </body>
 </html>

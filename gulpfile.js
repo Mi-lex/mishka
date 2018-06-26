@@ -89,24 +89,34 @@ gulp.task("image:minify", function() {
 })
 
 
-gulp.task("js", function () {
-  gulp.src("js/*.js")
+gulp.task("js:concat", function () {
+  return gulp.src("js/script-*.js")
+    .pipe(concat("script.js"))
+    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    .pipe(gulp.dest("js"));
+});
+
+gulp.task("js:minify", function () {
+  return gulp.src(["js/script.js", "js/picturefill.js"])
     .pipe(uglify({mangle: false}))
     .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    .pipe(rename({
+      suffix: "-min"
+    }))
     .pipe(gulp.dest("build/js"));
 });
 
 gulp.task("serve", function() {
   server.init({
     server: "build/",
-    index: "index.html",
+    index: "catalog.html",
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("js/**/*.js", ["js"]).on("change", server.reload);;
+  gulp.watch("js/**/*.js", ["js:concat", "js:minify"]).on("change", server.reload);
   gulp.watch("sass/**/*.{scss,sass}", ["style"]);
   gulp.watch("*.html", ["html"]).on("change", server.reload);
 });
@@ -120,7 +130,8 @@ gulp.task ("build", function(done) {
     "image:webp",
     "image:svgstore",
     "image:minify",
-    "js",
+    "js:concat",
+    "js:minify",
     done
   );
 });

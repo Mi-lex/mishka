@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mishka form</title>
   <link rel="stylesheet" href="css/style-min.css">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill-min.js" async></script>
 </head>
 <body>
   <header class="page-header">
@@ -188,7 +192,7 @@
           <small class="form__note">
             *Поля обязательны для заполнения
           </small>
-          <button class="form__make-order btn">
+          <button class="form__send-order btn">
             Отправить заказ
           </button>
         </div>
@@ -239,20 +243,6 @@
       </a>
     </div>
   </footer>
-  <script type="text/javascript">
-    "use strict";
-
-    var menu = document.querySelector('.page-header__menu'),
-        toggle = menu.querySelector('.page-header__menu-toggle');
-
-    menu.classList.remove('page-header__menu--nojs');
-    menu.classList.remove('page-header__menu--opened');
-    menu.classList.add('page-header__menu--closed');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('page-header__menu--opened');
-      menu.classList.toggle('page-header__menu--closed');
-    });
-  </script>
+  <script type="text/javascript" src="js/script-min.js"></script>
 </body>
 </html>

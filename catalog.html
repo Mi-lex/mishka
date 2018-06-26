@@ -6,6 +6,10 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Mishka catalog</title>
   <link rel="stylesheet" href="css/style-min.css">
+  <script>
+    document.createElement("picture");
+  </script>
+  <script src="js/picturefill-min.js" async></script>
 </head>
 <body>
   <header class="page-header">
@@ -209,6 +213,41 @@
         </button>
       </div>
     </article>
+    <section class="modal">
+      <div class="modal__inner">
+        <div class="modal__wrapper">
+          <h2 class="modal__title">
+            Добавить в корзину
+          </h2>
+          <p class="modal__text">
+            Выберете размер:
+          </p>
+          <div class="modal__fields-container">
+            <label class="modal__field">
+              <input type="radio" name="size" value="s">
+              <span class="modal__radio-mark">
+                S
+              </span>
+            </label>
+            <label class="modal__field">
+              <input type="radio" name="size" value="m">
+              <span class="modal__radio-mark">
+                M
+              </span>
+            </label>
+            <label class="modal__field">
+              <input type="radio" name="size" value="l">
+              <span class="modal__radio-mark">
+                L
+              </span>
+            </label>
+          </div>
+          <button class="modal__add">
+            Добавить
+          </button>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="page-footer">
@@ -254,20 +293,6 @@
       </a>
     </div>
   </footer>
-  <script type="text/javascript">
-    "use strict";
-
-    var menu = document.querySelector('.page-header__menu'),
-        toggle = menu.querySelector('.page-header__menu-toggle');
-
-    menu.classList.remove('page-header__menu--nojs');
-    menu.classList.remove('page-header__menu--opened');
-    menu.classList.add('page-header__menu--closed');
-
-    toggle.addEventListener('click', () => {
-      menu.classList.toggle('page-header__menu--opened');
-      menu.classList.toggle('page-header__menu--closed');
-    });
-  </script>
+  <script type="text/javascript" src="js/script-min.js"></script>
 </body>
 </html>
