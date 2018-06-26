@@ -46,7 +46,7 @@
       </nav>
       <ul class="page-header__user-list">
         <li class="page-header__search">
-          <a class="page-header__search-btn">
+          <a class="page-header__search-btn" tabindex="0">
             <svg width="18" height="18" class="page-header__icon page-header__icon--search">
               <use xlink:href="img/sprite.svg#icon-search"></use>
             </svg>
@@ -80,6 +80,14 @@
           <div class="catalog-list__item-img">
             <picture>
               <source media="(min-width: 1150px)"
+                      srcset="img/catalog/photo-1-desktop@1x.webp 1x,
+                              img/catalog/photo-1-desktop@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 768px)"
+                      srcset="img/catalog/photo-1-tablet@1x.webp 1x,
+                              img/catalog/photo-1-tablet@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 1150px)"
                       srcset="img/catalog/photo-1-desktop@1x.jpg 1x,
                               img/catalog/photo-1-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
@@ -112,6 +120,14 @@
           <div class="catalog-list__item-img">
             <picture>
               <source media="(min-width: 1150px)"
+                      srcset="img/catalog/photo-2-desktop@1x.webp 1x,
+                              img/catalog/photo-2-desktop@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 768px)"
+                      srcset="img/catalog/photo-2-tablet@1x.webp 1x,
+                              img/catalog/photo-2-tablet@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 1150px)"
                       srcset="img/catalog/photo-2-desktop@1x.jpg 1x,
                               img/catalog/photo-2-desktop@2x.jpg 2x">
               <source media="(min-width: 768px)"
@@ -143,6 +159,14 @@
         <figure class="catalog-list__item-picture">
           <div class="catalog-list__item-img">
             <picture>
+              <source media="(min-width: 1150px)"
+                      srcset="img/catalog/photo-3-desktop@1x.webp 1x,
+                              img/catalog/photo-3-desktop@2x.webp 2x"
+                      type="image/webp">
+              <source media="(min-width: 768px)"
+                      srcset="img/catalog/photo-3-tablet@1x.webp 1x,
+                              img/catalog/photo-3-tablet@2x.webp 2x"
+                      type="image/webp">
               <source media="(min-width: 1150px)"
                       srcset="img/catalog/photo-3-desktop@1x.jpg 1x,
                               img/catalog/photo-3-desktop@2x.jpg 2x">
@@ -180,6 +204,14 @@
           </svg>
         </button>
         <picture>
+          <source media="(min-width: 1150px)"
+                  srcset="img/catalog/video-desktop@1x.webp 1x,
+                          img/catalog/video-desktop@2x.webp 2x"
+                  type="image/webp">
+          <source media="(min-width: 768px)"
+                  srcset="img/catalog/video-tablet@1x.webp 1x,
+                          img/catalog/video-tablet@2x.webp 2x"
+                  type="image/webp">
           <source media="(min-width: 1150px)"
                   srcset="img/catalog/video-desktop@1x.jpg 1x,
                           img/catalog/video-desktop@2x.jpg 2x">
@@ -252,7 +284,7 @@
 
   <footer class="page-footer">
     <div class="page-footer__wrapper">
-      <a href="#" class="page-footer__logo">
+      <a href="index.html" class="page-footer__logo">
         <svg width="104" height="34" class="page-footer__logo-pic">
           <use xlink:href="img/logo-footer.svg#logo-footer"></use>
         </svg>
