@@ -55,3 +55,9 @@
   font-size: 53px;
   line-height: 57px;
 }
+
+// Transitions 
+
+@mixin ease-out($duration) {
+  transition: all $duration ease-out;
+}

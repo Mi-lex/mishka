@@ -1,0 +1,22 @@
+.section-title {
+    margin: 0;
+
+    font-size: 25px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #000;
+}
+
+@media (min-width: $tablet-width) {
+    .section-title {
+        font-size: 43px;
+        line-height: 50px;
+    }
+}
+
+@media (min-width: $desktop-width) {
+    .section-title {
+        font-size: 53px;
+        line-height: 57px;
+    }
+}

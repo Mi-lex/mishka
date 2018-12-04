@@ -13,7 +13,6 @@
 
   &__title {
     margin: 0;
-    @include mobile-big-font;
   }
 
   &__legend {
@@ -71,7 +70,6 @@
   &__price {
     display: block;
     margin-bottom: 26px;
-    line-height: 24px;
   }
 
   &__make-order {
@@ -111,7 +109,6 @@
     &__title {
       flex-grow: 1;
       margin: 0;
-      @include tablet-big-font;
     }
 
     &__legend {
@@ -199,7 +196,7 @@
     }
 
     &__title {
-      @include desktop-big-font;
+      position: relative;
       z-index: 5;
     }
 

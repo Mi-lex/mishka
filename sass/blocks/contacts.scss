@@ -41,12 +41,6 @@
 
 .contacts__header {
   margin-bottom: 22px;
-
-  font-size: 18px;
-  font-weight: bold;
-  line-height: 30px;
-
-  color: black;
 }
 
 .contacts__item-link {
@@ -89,7 +83,6 @@
 
     margin-top: 20px;
     margin-bottom: 43px;
-    @include tablet-big-font;
 
     .contacts__flag {
       position: absolute;
@@ -191,7 +184,6 @@
   .contacts__header {
     margin-top: 73px;
     margin-bottom: 45px;
-    @include desktop-big-font;
 
     .contacts__flag {
       top: -7px;

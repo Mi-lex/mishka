@@ -29,3 +29,9 @@
     }
   }
 }
+
+@media (min-width: $desktop-width) {
+  .btn {
+    @include ease-out(0.25s);
+  }
+}

@@ -51,17 +51,8 @@
     width: 442px;
     order: 0;
 
-    &__item {
-      width: 50%;
-    }
-
-    &__item:not(:nth-child(-n + 2)) {
-      display: inline-block;
-    }
-
     &__link {
       display: inline-block;
-      font-size: 15px;
     }
 
     &__link--primary {

@@ -138,6 +138,7 @@
 
   .crafting__play-btn {
     cursor: pointer;
+    @include ease-out(0.25s);
 
     &:hover {
       transform: translate(-50%, -50%) scale(1.2);

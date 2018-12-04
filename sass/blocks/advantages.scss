@@ -9,7 +9,6 @@
 
   &__title {
     margin: 0;
-    @include mobile-big-font;
   }
 
   &__list {
@@ -59,10 +58,6 @@
       margin-bottom: 47px;
     }
 
-    &__title {
-      @include tablet-big-font;
-    }
-
     &__list {
       flex-direction: row;
       flex-wrap: wrap;
@@ -85,10 +80,6 @@
 
     &__header {
       margin-bottom: 48px;
-    }
-
-    &__title {
-      @include desktop-big-font;
     }
   }
 }
