@@ -1,11 +1,8 @@
-"use strict";
-
-var gulp = require("gulp"),
+const gulp = require("gulp"),
     server = require("browser-sync").create(),
     rename = require("gulp-rename"),
     del = require("del"),
     plumber = require("gulp-plumber"),
-    run = require("run-sequence"),
     sass = require("gulp-sass"),
     postcss = require("gulp-postcss"),
     autoprefixer = require("autoprefixer"),
@@ -15,62 +12,69 @@ var gulp = require("gulp"),
     webp = require('gulp-webp'),
     svgstore = require('gulp-svgstore'),
     uglify = require('gulp-uglify'),
-    gutil = require('gulp-util'),
+    log = require('fancy-log'),
+    c = require('ansi-colors'),
     concat = require('gulp-concat');
 
-gulp.task("clean", function() {
-  return del("build");
-})
+const { series } = gulp; 
 
-gulp.task("copy", function() {
-  return gulp.src([
-          "*.html",
-          "fonts/**/*"
-     ], {
+const paths = {
+  styles: {
+    src: 'sass/style.scss',
+    dest: 'docs/css'
+  }
+}
+
+function clean() {
+  return del('docs')
+}
+
+function copy() {
+  return gulp.src([ '*.html', "fonts/**/*", "js/libraries/*.js" ], {
        base: "."
      })
-     .pipe(gulp.dest("build"));
-});
+    .pipe(gulp.dest('docs/'));
+}
 
-gulp.task("style", function() {
-  gulp.src("sass/style.scss")
+function style() {
+  return gulp.src(paths.styles.src)
     .pipe(plumber())
     .pipe(sass())
     .pipe(postcss([
       autoprefixer()
     ]))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest(paths.styles.dest))
     .pipe(csso())
     .pipe(rename("style-min.css"))
-    .pipe(gulp.dest("build/css"))
+    .pipe(gulp.dest(paths.styles.dest))
     .pipe(server.reload({ stream: true }));
-});
+};
 
-gulp.task("html", function() {
+function html() {
    return gulp.src("*.html")
     .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest("build"));
-});
+    .pipe(gulp.dest("docs"));
+};
 
-gulp.task("image:webp", function() {
+function imageWebp() {
   return gulp.src("img/**/*.{png,jpg}")
     .pipe(webp({quality: 90}))
     .pipe(gulp.dest("img"))
-})
+}
 
-gulp.task("image:svgstore", function() {
+function imageSvgstore() {
   return gulp.src("img/icons/icon-*.svg")
     .pipe(svgstore({
       inlineSvg: true
     }))
     .pipe(rename("sprite.svg"))
     .pipe(gulp.dest("img"));
-})
+}
 
-gulp.task("image:minify", function() {
+function imageMinify() {
   return gulp.src(["img/**/*.{png,jpg,webp}",
                    "img/*.svg"], {
-    base: "build"
+    base: "docs"
   })
     .pipe(imagemin([
       imagemin.optipng({optimizationLevel: 3}),
@@ -85,53 +89,46 @@ gulp.task("image:minify", function() {
           { cleanupIDs: false }
        ]
       })]))
-    .pipe(gulp.dest("build/img"));
-})
+    .pipe(gulp.dest("docs/img"));
+};
 
-
-gulp.task("js:concat", function () {
-  return gulp.src("js/script-*.js")
+function scripts() {
+  return gulp.src("js/*.js")
     .pipe(concat("script.js"))
-    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
-    .pipe(gulp.dest("js"));
-});
-
-gulp.task("js:minify", function () {
-  return gulp.src(["js/script.js", "js/picturefill.js"])
+    .on('error', function (err) { log(c.red('[Error]'), err.toString()); })
     .pipe(uglify({mangle: false}))
-    .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+    .on('error', function (err) {log(c.red('[Error]'), err.toString()); })
     .pipe(rename({
       suffix: "-min"
     }))
-    .pipe(gulp.dest("build/js"));
-});
+    .pipe(gulp.dest("docs/js"));
+}
 
-gulp.task("serve", function() {
+function jsWatch() {
+  scripts();
+  server.reload();
+}
+
+function serve() {
   server.init({
-    server: "build/",
-    index: "catalog.html",
-    notify: false,
-    open: true,
-    cors: true,
-    ui: false
+    server: "./docs/",
   });
 
-  gulp.watch("js/**/*.js", ["js:concat", "js:minify"]).on("change", server.reload);
-  gulp.watch("sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch("*.html", ["html"]).on("change", server.reload);
-});
+  gulp.watch('js/**/*.js').on('change', jsWatch);
+  gulp.watch("sass/**/*.{scss,sass}", style);
+  gulp.watch("*.html", gulp.series(html, server.reload));
+};
 
-gulp.task ("build", function(done) {
-  run(
-    "clean",
-    "copy",
-    "style",
-    "html",
-    "image:webp",
-    "image:svgstore",
-    "image:minify",
-    "js:concat",
-    "js:minify",
-    done
-  );
-});
+const build = series(
+    clean,
+    copy,
+    style,
+    html,
+    imageWebp,
+    imageSvgstore,
+    imageMinify,
+    scripts
+);
+
+exports.build = build;
+exports.serve = serve;
