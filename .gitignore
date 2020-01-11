@@ -7,6 +7,6 @@
 *.sublime*
 css/*.css
 node_modules/
-build/
 psd/
 Thumbs.db
+img/**/*.webp
